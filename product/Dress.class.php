@@ -5,7 +5,8 @@ class Dress extends Product implements Main
 {
     public $size;
 
-    function __construct($name, $size, $price, $description){
+    function __construct($name, $size, $price, $description)
+    {
         parent::__construct($name, $price, $description);
         $this->size = $size;
     }

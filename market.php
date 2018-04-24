@@ -6,8 +6,7 @@ trait ChangeDelivery
 {
     public function getDelivery()
     {
-        if ($this->mass < 10)
-        {
+        if ($this->mass < 10) {
             return $this->delivery;
         } else {
             return 250;

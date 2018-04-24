@@ -23,29 +23,30 @@ abstract class Product implements Main
     abstract public function showProduct();
 
 
-	function getDiscount(){
+	function getDiscount()
+	{
 		if ($this->weight) {
 			if ($this->weight > 10) {
-				return round($this->price -($this->price * $this->value / 100) );
-			}else{
+				return round($this->price - ($this->price * $this->value / 100));
+			} else {
 				return $this->price;
 			}
 			
-		}elseif($this->weight == null){
-			return round($this->price -($this->price * $this->value / 100) );
+		} elseif($this->weight == null) {
+			return round($this->price -($this->price * $this->value / 100));
 		}
 	}
 
-	function getDeliverPrice(){
-		if ($this->getDiscount() == $this->price){
+	function getDeliverPrice()
+	{
+		if ($this->getDiscount() == $this->price) {
 			return "250 руб.";
-		}else{
+		} else {
 			return "300 руб.";
 		}
-
 	} 
 
-	function getFullDescription(){
+	function getFullDescription() {
 		echo "{$this->name} {$this->type} цена  {$this->getDiscount()} руб.  <br/> {$this->title}  <br/> цена доставки {$this->getDeliverPrice()}";
 	}  
 	

@@ -6,7 +6,8 @@ class Drinks extends Product
 {
     public $volume;
 
-    function __construct($name, $volume, $price, $description){
+    function __construct($name, $volume, $price, $description)
+    {
         parent::__construct($name, $price, $description);
         $this->volume = $volume;
     }
